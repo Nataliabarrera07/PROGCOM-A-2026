@@ -1,0 +1,127 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    
+		System.out.println("Hello World");
+		System.out.print("16. Ingrese número para la tabla: ");
+        int n16 = sc.nextInt();
+        int i16 = 1;
+        while (i16 <= 10) {
+            System.out.println(n16 + " x " + i16 + " = " + (n16 * i16));
+            i16++;
+        }
+	}
+}
+
+ // 17. Suma de naturales hasta n
+        System.out.print("\n17. Sumar hasta n: ");
+        int n17 = sc.nextInt();
+        int suma17 = 0, i17 = 1;
+        while (i17 <= n17) {
+            suma17 += i17;
+            i17++;
+        }
+        System.out.println("La suma es: " + suma17);
+
+// 18. Factorial
+        System.out.print("\n18. Factorial de: ");
+        int n18 = sc.nextInt();
+        long fact18 = 1; 
+        int i18 = 1;
+        if (n18 < 0) System.out.println("No existe factorial negativo");
+        else {
+            while (i18 <= n18) {
+                fact18 *= i18;
+                i18++;
+            }
+            System.out.println("Factorial: " + fact18);
+        }
+
+// 19. Serie Fibonacci
+        System.out.print(" Cuántos Fibonacci: ");
+        int n19 = sc.nextInt();
+        int a = 0, b = 1, cont19 = 0;
+        while (cont19 < n19) {
+            System.out.print(a + " ");
+            int temp = a + b;
+            a = b;
+            b = temp;
+            cont19++;
+        }
+        System.out.println();
+
+// 20. Adivinar color
+        String secreto = "azul";
+        int intentos = 0;
+        boolean acertó = false;
+        System.out.println("\n20. Adivina el color secreto:");
+        while (intentos < 10 && !acertó) {
+            System.out.print("Intento " + (intentos + 1) + ": ");
+            String rta = sc.next();
+            if (rta.equalsIgnoreCase(secreto)) {
+                System.out.println("¡Correcto!");
+                acertó = true;
+            }
+            intentos++;
+        }
+
+// 21. Números pares del 1 al 100
+        System.out.println("\n21. Pares del 1 al 100:");
+        int i21 = 1;
+        while (i21 <= 100) {
+            if (i21 % 2 == 0) System.out.print(i21 + " ");
+            i21++;
+        }
+        System.out.println();
+
+// 22. Suma de dígitos
+        System.out.print("\n22. Ingrese número para sumar dígitos: ");
+        int n22 = sc.nextInt();
+        int suma22 = 0;
+        while (n22 > 0) {
+            suma22 += (n22 % 10);
+            n22 /= 10;
+        }
+        System.out.println("Suma de dígitos: " + suma22);
+
+        // 23. Número primo
+        System.out.print("\n23. ¿Es primo?: ");
+        int n23 = sc.nextInt();
+        boolean esPrimo = n23 > 1;
+        int i23 = 2;
+        while (i23 <= Math.sqrt(n23) && esPrimo) {
+            if (n23 % i23 == 0) esPrimo = false;
+            i23++;
+        }
+        System.out.println("Resultado: " + (esPrimo ? "Es Primo" : "No es Primo"));
+
+        // 24. Triángulo
+        System.out.print("\n24. Filas del triángulo: ");
+        int filas = sc.nextInt();
+        int i24 = 1;
+        while (i24 <= filas) {
+            int j = 1;
+            while (j <= i24) {
+                System.out.print("*");
+                j++;
+            }
+            System.out.println();
+            i24++;
+        }
+
+        // 25. Potencia sin operador **
+        System.out.print("\n25. Base: ");
+        int base = sc.nextInt();
+        System.out.print("Exponente: ");
+        int exp = sc.nextInt();
+        long res25 = 1;
+        int i25 = 0;
+        while (i25 < exp) {
+            res25 *= base;
+            i25++;
+        }
+        System.out.println("Potencia: " + res25);
+    }
+}
